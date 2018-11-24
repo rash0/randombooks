@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Cabin|Lobster');
+
+* {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'Cabin', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #7B717F;
+}
+
+body {
+  background-size: cover;
+  background-color: #D7E7FE;
+}
+
+/*container component*/
+.wrapper {
+  margin-top: 50px;
+  height: 100%;
+  padding: 0;
+}
+
+.wrapper button {
+  outline: none !important;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-style: none !important;
+  font-family: 'Lobster', cursive !important;
+  font-size: 2em;
+  padding-bottom: 12px;
+  background-color: #F48A81;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 5px 19px #c9c9c9;
+}
+
+.wrapper button:hover, button:active, button:focus {
+  box-shadow: 0px 5px 19px #c9c9c9 !important;
+  outline: none !important;
+}
+
+.coll {
+  visibility: collapse;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+.coll.on {
+  max-height: 190rem;
+  visibility: visible;
+  transition: all 3s ease-in-out;
+}
+
+.container {
+  max-width: 30rem;
+  height: auto;
+}
+
+.container.fi {
+  background-color: #FAFBFC;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 5px 19px #c9c9c9;
+}
+
+.container.fi img {
+  min-width: 140px;
+  height: auto;
+  box-shadow: -8px 7px 19px #DBDBDB;
+}
+
+.container.fi h2, h5, h6 {
+  margin-left: 40px;
+}
+
+.container.fi h6:first-child {
+  margin-top: 20px;
+}
+
+.container.fi div:nth-child(3) {
+  width: auto;
+  background-color: white !important;
+  border-radius: 10px;
+  box-shadow: -2px 5px 19px #DBDBDB;
+}
+
+.container.fi p, span {
+  font-family: 'Arvo', serif !important;
+}
+
+.container.fi p a {
+  color: blue;
+  cursor: pointer;
+}
+
+/* Small devices (landscape phones, 320px and up) */
+@media (min-width: 320px) {
+  h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
