@@ -31,7 +31,7 @@ In the Producation enviroment, first we build the react app (from Inside the cli
 
 ``` bash
 # Everytime the server get request, it services as the app from the build folder
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.resolve(__dirname, 'client/build')));
 ```
 
 ``` bash
@@ -40,4 +40,8 @@ npm run build
 
 # From the randombooks folder run
 echo “node_modules/” > .gitignore
+
+# Also from the randombooks folder run
+npm start || node server.js
+
 ```
