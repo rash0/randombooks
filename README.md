@@ -3,8 +3,9 @@
 > A React/express project
 > To randmoize books from goodreads.
 
-
-                                          ![randombooks](https://i.imgur.com/lOWmsUT.gif)
+<p align="center">
+![randombooks](https://i.imgur.com/lOWmsUT.gif)
+</p>
 
 ## Development Setup
 
