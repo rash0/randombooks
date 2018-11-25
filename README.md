@@ -4,7 +4,7 @@
 > To randmoize books from goodreads.
 
 <p align="center">
-![randombooks](https://i.imgur.com/lOWmsUT.gif)
+  <img src="https://i.imgur.com/lOWmsUT.gif">
 </p>
 
 ## Development Setup
