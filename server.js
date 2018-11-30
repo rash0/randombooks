@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-var router = express.Router();
 var path = require('path');
 var request = require('request');
 var parseString = require('xml2js').parseString;
@@ -13,13 +12,14 @@ app.use(compression())
 app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 // FallBack when the user manpilates the address to redirect again to homepage
-app.get('/*', function (req, res) {
-    res.sendFile(path.resolve(__dirname, 'client/build/index.html'))
-})
+// app.get('*', function (req, res) {
+//     res.sendFile(__dirname + '/client/build/index.html')
+// })
+
 
 const KEY = 'MSiPqCksVPRFRD2c6m9Q'
 
-app.get('/new', function(req, res){
+app.get('/n', function(req, res){
   const bookID = Math.floor(Math.random() * (95000 - 1 + 1)) + 1
   console.log(bookID)
 
@@ -32,15 +32,14 @@ app.get('/new', function(req, res){
       if (!error && response.statusCode === 200) {
         parseString(body, function (err, result) {
             console.dir((err === null) ? "no parsing error" : err);
-            res.send(result.GoodreadsResponse.book[0]);
+            res.json(result.GoodreadsResponse.book[0]);
         })
        } else {
         console.log('req went wrong  ' + error)
-        res.redirect('/new')
+        res.redirect('/')
       }
   }
   );
 });
-
 
 app.listen(port, () =>console.log(`Listening on port ${port}`))

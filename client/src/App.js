@@ -21,7 +21,7 @@ class App extends React.Component {
 
   async fatherOfRequests() {
     try{
-      const response = await fetch('/new');
+      const response = await fetch('/n');
       const res = await response.json();
       await this.setState({
           title: res.title[0],
