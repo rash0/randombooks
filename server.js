@@ -10,10 +10,11 @@ const port = process.env.PORT || 5000;
 
 app.use(compression())
 
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.resolve(__dirname, 'client/build')));
 
+// FallBack when the user manpilates the address to redirect again to homepage
 app.get('/*', function (req, res) {
-  res.redirect('/')
+    res.sendFile(path.resolve(__dirname, 'client/build/index.html'))
 })
 
 const KEY = 'MSiPqCksVPRFRD2c6m9Q'
