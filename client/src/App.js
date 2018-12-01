@@ -9,7 +9,7 @@ class App extends React.Component {
   state = {
     title: 'Some We Love, Some We Hate, Some We Eat: Why Its So Hard to Think Straight About Animals',
     author: 'Hal Herzog',
-    img: '',//require('./img/ph.png'),
+    img: require('./img/ph.png'),
     rating: 3.56,
     pages: 263,
     year: 1998,
@@ -41,7 +41,6 @@ class App extends React.Component {
     }
   }
 
-
   toggleInfo = () => {
     this.setState({ isOpen: !this.state.isOpen });
   }
@@ -63,10 +62,12 @@ class App extends React.Component {
   }
 
   renderedInfo() {
-   if (this.state.isOpen === true && this.state.info.length > 530) {
-     return this.state.info.slice(0, 530);
+    var info = this.state.info
+    var filteredInfo = info
+   if (this.state.isOpen === true && filteredInfo.length > 530) {
+     return filteredInfo.slice(0, 530);
    }
-   return this.state.info;
+   return filteredInfo;
   }
 
 
