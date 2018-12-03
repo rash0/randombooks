@@ -11,7 +11,7 @@ app.use(compression())
 
 app.use(express.static(path.resolve(__dirname, 'client/build')));
 
-
+// Naked APi is not a good practice, so usually you should add your api key to FILE_NAME.env file and import it to here as process.env.FILE_NAME
 const KEY = 'MSiPqCksVPRFRD2c6m9Q'
 
 app.get('/rbr', function(req, res){
